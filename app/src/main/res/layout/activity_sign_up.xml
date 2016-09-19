@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_login"
+        android:orientation="vertical"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/ten_margin"
+        android:paddingBottom="@dimen/ten_margin"
+        android:paddingLeft="@dimen/thirty_margin"
+        android:paddingRight="@dimen/thirty_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_logo" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/colorHint"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/edt_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorEdittextTint"
+                    android:drawableLeft="@drawable/ic_user"
+                    android:drawablePadding="@dimen/ten_margin"
+                    android:hint="Name"
+                    app:font="@{`medium`}"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="@color/colorLable"
+                    android:textColorHint="@color/colorHint" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/txtLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorHint"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorEdittextTint"
+                    android:drawableLeft="@drawable/ic_mail"
+                    android:drawablePadding="@dimen/ten_margin"
+                    android:hint="Email"
+                    app:font="@{`medium`}"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="40"
+                    android:singleLine="true"
+                    android:textColor="@color/colorLable"
+                    android:textColorHint="@color/colorHint" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorHint"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorEdittextTint"
+                    android:drawableLeft="@drawable/ic_pass"
+                    android:drawablePadding="@dimen/ten_margin"
+                    android:hint="Password"
+                    app:font="@{`medium`}"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="@color/colorLable"
+                    android:textColorHint="@color/colorHint" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorHint"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/et_confirm_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorEdittextTint"
+                    android:drawableLeft="@drawable/ic_pass"
+                    android:drawablePadding="@dimen/ten_margin"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    app:font="@{`medium`}"
+                    android:singleLine="true"
+                    android:textColor="@color/colorLable"
+                    android:textColorHint="@color/colorHint" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@drawable/btn_selector_round_blue"
+                android:text="@string/register"
+                android:onClick="onClickResister"
+                app:font="@{`bold`}"
+                android:textAllCaps="true"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/colorPlanText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twenty_margin"
+                app:font="@{`medium`}"
+                android:text="@string/already_have_account"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorLable" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_margin"
+                android:text="@string/sign_in"
+                app:font="@{`bold`}"
+                android:onClick="onClickSignIn"
+                android:textAllCaps="true"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</layout>

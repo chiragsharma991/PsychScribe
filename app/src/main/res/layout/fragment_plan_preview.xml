@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/plan_bg"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            android:padding="@dimen/thirty_margin">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center|top"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/monthly"
+                        android:textAllCaps="true"
+                        app:font="@{`medium`}"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:background="@drawable/circle_white_bg"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="$ 2520"
+                        app:font="@{`bold`}"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:gravity="center"
+                        android:minLines="4"
+                        android:maxWidth="200dp"
+                        android:maxLines="4"
+                        app:font="@{`medium`}"
+                        android:ellipsize="end"
+                        android:text="@string/dummy"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/colorPlanText" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/btn_selector_round_white"
+                    android:text="@string/purchase_now"
+                    android:textAllCaps="true"
+                    android:paddingLeft="@dimen/thirty_margin"
+                    app:font="@{`bold`}"
+                    android:paddingRight="@dimen/thirty_margin"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

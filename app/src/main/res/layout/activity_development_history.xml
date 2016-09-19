@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="selectedPosition"
+            type="Integer"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="true"
+        tools:context="com.psychscribe.base.BaseActivityWithNavigationDrawer">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <include
+                android:id="@+id/include_toolbar"
+                layout="@layout/layout_toolbar" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linTab"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgEarlyHistory"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:onClick="onClickTab"
+                    android:tag="0"
+                    android:background="@{selectedPosition == 0 ? @android:color/white : @color/colorAddPatientSelector}"
+                    android:padding="@dimen/ten_margin"
+                    android:src="@{selectedPosition == 0 ? @drawable/ic_tab_early_active : @drawable/ic_tab_early_inactive}"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgDevelopment"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:onClick="onClickTab"
+                    android:tag="1"
+                    android:background="@{selectedPosition == 1 ? @android:color/white : @color/colorSplash}"
+                    android:padding="@dimen/ten_margin"
+                    android:src="@{selectedPosition == 1 ? @drawable/ic_tab_development_active : @drawable/ic_tab_development_inactive}" />
+
+                <ImageView
+                    android:id="@+id/imgMedical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:onClick="onClickTab"
+                    android:tag="2"
+                    android:background="@{selectedPosition == 2 ? @android:color/white : @color/colorAddPatientSelector}"
+                    android:padding="@dimen/ten_margin"
+                    android:src="@{selectedPosition == 2 ? @drawable/ic_tab_medical_active : @drawable/ic_tab_medical_inactive}" />
+
+                <ImageView
+                    android:id="@+id/imgChildCare"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:onClick="onClickTab"
+                    android:tag="3"
+                    android:background="@{selectedPosition == 3 ? @android:color/white : @color/colorSplash}"
+                    android:padding="@dimen/ten_margin"
+                    android:src="@{selectedPosition == 3 ? @drawable/ic_tab_child_active : @drawable/ic_tab_child_inactive}" />
+
+                <ImageView
+                    android:id="@+id/imgHabit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:onClick="onClickTab"
+                    android:tag="4"
+                    android:background="@{selectedPosition == 4 ? @android:color/white : @color/colorAddPatientSelector}"
+                    android:padding="@dimen/ten_margin"
+                    android:src="@{selectedPosition == 4 ? @drawable/ic_tab_habit_active : @drawable/ic_tab_habit_inactive}" />
+
+            </LinearLayout>
+
+            <com.psychscribe.utiz.customvViews.ViewPagerSwipeHandle
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                app:swipeable="false"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

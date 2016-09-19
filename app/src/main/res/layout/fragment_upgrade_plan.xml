@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_login"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/imgMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:src="@drawable/ic_menu_blue" />
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgMenu"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_app_name_logo" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/indicator"
+            android:layout_below="@+id/img_logo"
+            android:layout_marginTop="@dimen/thirty_margin"
+            android:clipToPadding="false" />
+
+        <com.psychscribe.utiz.pageindicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            app:fillColor="@color/colorPrimary"
+            app:pageColor="@color/colorCircleIndicator"
+            app:radius="5dp"
+            app:spaceWidth="10"
+            app:strokeColor="@color/colorCircleIndicator"
+            app:strokeWidth="0dp" />
+
+    </RelativeLayout>
+
+</layout>

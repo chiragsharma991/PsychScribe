@@ -1,0 +1,23 @@
+
+
+ //For common recycler view
+ new RecyclerBindingAdapter<>(R.layout.item_holder, BR.patientModel, list);
+
+   showSnackbar(binding.getRoot(), String.format(getString(R.string.please_enter), getString(R.string.last_name)));
+
+ * Remember
+ 1. Encrypt and Decrypt login
+ 2. Locally data save encrypt
+
+
+ * If need to response code
+  if (response.isSuccessful()) {
+                     Log.e("response", response.body().toString());
+                 }else{
+                     try {
+                         JSONObject jObjError = new JSONObject(response.errorBody().string());
+                         Log.e("Error ","" + jObjError.toString());
+                     } catch (Exception e1) {
+                         e1.printStackTrace();
+                     }
+                 }

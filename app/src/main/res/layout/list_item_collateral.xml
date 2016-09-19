@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="collateralModel"
+            type="com.psychscribe.patients.model.CollateralModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner_grey_transparent_bg"
+        android:clickable="true"
+        android:gravity="center|top"
+        android:layout_marginBottom="@dimen/ten_margin"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{collateralModel.collateralName}"
+                app:font="@{`medium`}"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorBlack" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/imgExpand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/ten_margin"
+                    android:background="@android:color/transparent"
+                    android:layout_toLeftOf="@+id/imgDelete"
+                    android:src="@{collateralModel.isExpand ? @drawable/ic_drop_up_black : @drawable/ic_drop_down_black}" />
+
+                <ImageButton
+                    android:id="@+id/imgDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/ten_margin"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="@dimen/ten_margin"
+                    android:visibility="@{collateralModel.isExpand ? View.VISIBLE : View.GONE}"
+                    android:src="@drawable/ic_cancel_red"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten_margin"
+            android:visibility="@{collateralModel.isExpand ? View.VISIBLE : View.GONE}"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEdittextTint"
+                android:drawablePadding="@dimen/ten_margin"
+                android:hint="@string/name"
+                app:font="@{`medium`}"
+                android:singleLine="true"
+                android:textColor="@color/colorLable"
+                android:textColorHint="@color/colorHint" />
+
+            <EditText
+                android:id="@+id/edtCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEdittextTint"
+                android:drawablePadding="@dimen/ten_margin"
+                android:hint="@string/company"
+                app:font="@{`medium`}"
+                android:layout_marginTop="@dimen/ten_margin"
+                android:textColor="@color/colorLable"
+                android:textColorHint="@color/colorHint" />
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEdittextTint"
+                android:drawablePadding="@dimen/ten_margin"
+                android:hint="@string/phone"
+                android:inputType="number"
+                app:font="@{`medium`}"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/ten_margin"
+                android:textColor="@color/colorLable"
+                android:textColorHint="@color/colorHint" />
+
+            <EditText
+                android:id="@+id/edtFaxNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEdittextTint"
+                android:drawablePadding="@dimen/ten_margin"
+                android:hint="@string/fax_no"
+                app:font="@{`medium`}"
+                android:inputType="number"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/ten_margin"
+                android:textColor="@color/colorLable"
+                android:textColorHint="@color/colorHint" />
+
+            <EditText
+                android:id="@+id/edtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEdittextTint"
+                android:drawablePadding="@dimen/ten_margin"
+                android:hint="@string/address"
+                app:font="@{`medium`}"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/ten_margin"
+                android:textColor="@color/colorLable"
+                android:textColorHint="@color/colorHint" />
+
+            <EditText
+                android:id="@+id/edtAdditionalInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEdittextTint"
+                android:drawablePadding="@dimen/ten_margin"
+                android:hint="@string/additional_info"
+                app:font="@{`medium`}"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/ten_margin"
+                android:textColor="@color/colorLable"
+                android:textColorHint="@color/colorHint" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

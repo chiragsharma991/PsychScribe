@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/early_history"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/colorPrimary"
+                    app:font="@{`medium`}" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:id="@+id/txtConception"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/ten_margin"
+                    android:layout_toLeftOf="@+id/chkConception"
+                    android:text="@string/early_history_conception_was"
+                    app:font="@{`medium`}" />
+
+                <CheckBox
+                    android:id="@+id/chkConception"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/txtConception"
+                    android:button="@drawable/checkbox_yes_no_selector"
+                    android:checked="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/ten_margin"
+                android:background="@color/colorEdittextTint" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:id="@+id/txtPregnancy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/ten_margin"
+                    android:layout_toLeftOf="@+id/chkPregnancy"
+                    android:text="@string/early_history_pregnency"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    app:font="@{`medium`}" />
+
+                <CheckBox
+                    android:id="@+id/chkPregnancy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/txtPregnancy"
+                    android:button="@drawable/checkbox_yes_no_selector"
+                    android:checked="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/ten_margin"
+                android:background="@color/colorEdittextTint" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:drawablePadding="@dimen/ten_margin"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:drawableRight="@drawable/ic_drop_down_light_grey"
+                android:text="@string/early_history_delivery"
+                app:font="@{`medium`}" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/ten_margin"
+                android:background="@color/colorEdittextTint" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@drawable/round_corner_grey_transparent_bg"
+                android:clickable="true"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_horizontal_margin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/infancy"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/colorBlack"
+                        app:font="@{`bold`}" />
+
+                    <ImageButton
+                        android:id="@+id/imgInfancyExpand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:tag="1"
+                        android:background="@android:color/transparent"
+                        android:padding="@dimen/ten_margin"
+                        android:src="@drawable/ic_drop_up_black" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linInfancyChild"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten_margin"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/edtBabyBirth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorEdittextTint"
+                        android:drawablePadding="@dimen/ten_margin"
+                        android:hint="@string/baby_at_birth"
+                        android:singleLine="true"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/colorLable"
+                        android:textColorHint="@color/colorHint"
+                        app:font="@{`medium`}" />
+
+                    <EditText
+                        android:id="@+id/edtFirstThreeMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:layout_marginTop="@dimen/ten_margin"
+                        android:backgroundTint="@color/colorEdittextTint"
+                        android:drawablePadding="@dimen/ten_margin"
+                        android:hint="@string/first_three_month"
+                        android:textColor="@color/colorLable"
+                        android:textColorHint="@color/colorHint"
+                        app:font="@{`medium`}" />
+
+                    <EditText
+                        android:id="@+id/edtFeedingProb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ten_margin"
+                        android:backgroundTint="@color/colorEdittextTint"
+                        android:drawablePadding="@dimen/ten_margin"
+                        android:hint="@string/feeding_problem"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/colorLable"
+                        android:textColorHint="@color/colorHint"
+                        app:font="@{`medium`}" />
+
+                    <EditText
+                        android:id="@+id/edtNursedAge"
+                        android:layout_width="match_parent"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ten_margin"
+                        android:backgroundTint="@color/colorEdittextTint"
+                        android:drawablePadding="@dimen/ten_margin"
+                        android:hint="@string/nursed_age_wined"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@color/colorLable"
+                        android:textColorHint="@color/colorHint"
+                        app:font="@{`medium`}" />
+
+                    <EditText
+                        android:id="@+id/edtExcessiveVomiting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ten_margin"
+                        android:backgroundTint="@color/colorEdittextTint"
+                        android:drawablePadding="@dimen/ten_margin"
+                        android:hint="@string/excessive_vomiting"
+                        android:singleLine="true"
+                        android:textColor="@color/colorLable"
+                        android:textColorHint="@color/colorHint"
+                        app:font="@{`medium`}" />
+
+                    <EditText
+                        android:id="@+id/edtExcessiveCrying"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ten_margin"
+                        android:backgroundTint="@color/colorEdittextTint"
+                        android:drawablePadding="@dimen/ten_margin"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:hint="@string/excessive_crying"
+                        android:singleLine="true"
+                        android:textColor="@color/colorLable"
+                        android:textColorHint="@color/colorHint"
+                        app:font="@{`medium`}" />
+
+
+                    <EditText
+                        android:id="@+id/edtColicDescibe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ten_margin"
+                        android:backgroundTint="@color/colorEdittextTint"
+                        android:drawablePadding="@dimen/ten_margin"
+                        android:hint="@string/colic_describe"
+                        android:singleLine="true"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/colorLable"
+                        android:textColorHint="@color/colorHint"
+                        app:font="@{`medium`}" />
+
+                    <EditText
+                        android:id="@+id/edtOtherProblem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ten_margin"
+                        android:backgroundTint="@color/colorEdittextTint"
+                        android:drawablePadding="@dimen/ten_margin"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:hint="@string/other_problms"
+                        android:singleLine="true"
+                        android:textColor="@color/colorLable"
+                        android:textColorHint="@color/colorHint"
+                        app:font="@{`medium`}" />
+
+                    <EditText
+                        android:id="@+id/edtAnyPhysicle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ten_margin"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:backgroundTint="@color/colorEdittextTint"
+                        android:drawablePadding="@dimen/ten_margin"
+                        android:hint="@string/anyphysical_problem"
+                        android:singleLine="true"
+                        android:textColor="@color/colorLable"
+                        android:textColorHint="@color/colorHint"
+                        app:font="@{`medium`}" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@drawable/round_corner_grey_transparent_bg"
+                android:clickable="true"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_horizontal_margin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/additional_info"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/colorBlack"
+                        app:font="@{`bold`}" />
+
+                    <ImageButton
+                        android:id="@+id/imgAdditionalExpand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:tag="1"
+                        android:background="@android:color/transparent"
+                        android:padding="@dimen/ten_margin"
+                        android:src="@drawable/ic_drop_up_black" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linAdditionalChild"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten_margin"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                        <TextView
+                            android:id="@+id/txtPostmpartum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/ten_margin"
+                            android:layout_toLeftOf="@+id/chkPostmpartum"
+                            android:text="@string/postpartum_depression"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            app:font="@{`medium`}" />
+
+                        <CheckBox
+                            android:id="@+id/chkPostmpartum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignTop="@+id/txtPostmpartum"
+                            android:button="@drawable/checkbox_yes_no_selector"
+                            android:checked="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/ten_margin"
+                        android:background="@color/colorEdittextTint" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                        <TextView
+                            android:id="@+id/txtDidChild"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/ten_margin"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:layout_toLeftOf="@+id/chkDidChild"
+                            android:text="@string/did_child_or_any_family"
+                            app:font="@{`medium`}" />
+
+                        <CheckBox
+                            android:id="@+id/chkDidChild"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignTop="@+id/txtDidChild"
+                            android:button="@drawable/checkbox_yes_no_selector"
+                            android:checked="true"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/ten_margin"
+                        android:background="@color/colorEdittextTint" />
+
+
+                    <EditText
+                        android:id="@+id/edtAnswer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorEdittextTint"
+                        android:drawablePadding="@dimen/ten_margin"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:hint="@string/enter_answer"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:singleLine="true"
+                        android:textColor="@color/colorLable"
+                        android:textColorHint="@color/colorHint"
+                        app:font="@{`medium`}" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="initPos"
+            type="Integer" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_help"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linIndicator"
+            android:clipToPadding="false" />
+
+        <LinearLayout
+            android:id="@+id/linIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linBottom"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/relIndicatorOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@{initPos == 0 ? @drawable/circle_blue : @drawable/circle_blue_white_bg}"
+                android:scaleX="0.5"
+                android:scaleY="0.5">
+
+                <TextView
+                    android:id="@+id/txtIndicatorOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="1"
+                    android:textColor="@{initPos == 0 ? @android:color/white : @color/colorPrimary}"
+                    app:font="@{`medium`}" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relIndicatorTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten_margin"
+                android:layout_marginRight="@dimen/ten_margin"
+                android:background="@{initPos == 1 ? @drawable/circle_blue : @drawable/circle_blue_white_bg}"
+                android:scaleX="0.5"
+                android:scaleY="0.5">
+
+                <TextView
+                    android:id="@+id/txtIndicatorTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="2"
+                    android:textColor="@{initPos == 1 ? @android:color/white : @color/colorPrimary}"
+                    app:font="@{`medium`}" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relIndicatorThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@{initPos == 2 ? @drawable/circle_blue : @drawable/circle_blue_white_bg}"
+                android:scaleX="0.5"
+                android:scaleY="0.5">
+
+                <TextView
+                    android:id="@+id/txtIndicatorThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@{initPos == 2 ? @android:color/white : @color/colorPrimary}"
+                    app:font="@{`medium`}" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/shadow_line"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector_blue"
+                    android:onClick="onGetStartedClick"
+                    android:text="@string/get_started"
+                    android:textAllCaps="true"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/colorPlanText"
+                    app:font="@{`bold`}" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector_white"
+                    android:onClick="onLoginClick"
+                    android:text="@string/sign_in"
+                    android:textAllCaps="true"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/colorPrimary"
+                    app:font="@{`bold`}" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

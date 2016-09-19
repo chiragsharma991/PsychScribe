@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/child_care_early"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/colorPrimary"
+                    app:font="@{`medium`}" />
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_margin"
+                android:textColorHint="@color/colorHint"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/edtAgeInfant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorEdittextTint"
+                    android:hint="@string/age_of_infant"
+                    android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/colorLable"
+                    android:textColorHint="@color/colorHint"
+                    app:font="@{`medium`}" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <EditText
+                android:id="@+id/edtWhoLook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEdittextTint"
+                android:drawablePadding="@dimen/ten_margin"
+                android:hint="@string/who_look_care"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorLable"
+                android:textColorHint="@color/colorHint"
+                app:font="@{`medium`}" />
+
+            <EditText
+                android:id="@+id/edtListCare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEdittextTint"
+                android:drawablePadding="@dimen/ten_margin"
+                android:hint="@string/list_care_of_child"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorLable"
+                android:textColorHint="@color/colorHint"
+                app:font="@{`medium`}" />
+
+            <EditText
+                android:id="@+id/edtPreschool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEdittextTint"
+                android:drawablePadding="@dimen/ten_margin"
+                android:hint="@string/preschool_name_school"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorLable"
+                android:textColorHint="@color/colorHint"
+                app:font="@{`medium`}" />
+
+
+            <EditText
+                android:id="@+id/edtHowDidChild"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEdittextTint"
+                android:drawablePadding="@dimen/ten_margin"
+                android:hint="@string/how_did_the_child_do"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorLable"
+                android:textColorHint="@color/colorHint"
+                app:font="@{`medium`}" />
+
+            <EditText
+                android:id="@+id/edtEmotionally"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEdittextTint"
+                android:drawablePadding="@dimen/ten_margin"
+                android:hint="@string/emotionally"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorLable"
+                android:textColorHint="@color/colorHint"
+                app:font="@{`medium`}" />
+
+            <EditText
+                android:id="@+id/edtCooperatively"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEdittextTint"
+                android:drawablePadding="@dimen/ten_margin"
+                android:hint="@string/cooperatively"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorLable"
+                android:textColorHint="@color/colorHint"
+                app:font="@{`medium`}" />
+
+            <EditText
+                android:id="@+id/edtKingerGarten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEdittextTint"
+                android:drawablePadding="@dimen/ten_margin"
+                android:hint="@string/kingergarten"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorLable"
+                android:textColorHint="@color/colorHint"
+                app:font="@{`medium`}" />
+
+            <EditText
+                android:id="@+id/edtGrades"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEdittextTint"
+                android:drawablePadding="@dimen/ten_margin"
+                android:hint="@string/grades_one_three"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorLable"
+                android:textColorHint="@color/colorHint"
+                app:font="@{`medium`}" />
+
+            <EditText
+                android:id="@+id/edtDescibeSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEdittextTint"
+                android:drawablePadding="@dimen/ten_margin"
+                android:hint="@string/describe_setting"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorLable"
+                android:textColorHint="@color/colorHint"
+                app:font="@{`medium`}" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:id="@+id/txtHasChild"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/ten_margin"
+                    android:layout_toLeftOf="@+id/chkHasChild"
+                    android:text="@string/has_the_child_had"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    app:font="@{`medium`}" />
+
+                <CheckBox
+                    android:id="@+id/chkHasChild"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/txtHasChild"
+                    android:button="@drawable/checkbox_yes_no_selector"
+                    android:checked="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/ten_margin"
+                android:background="@color/colorEdittextTint" />
+
+            <EditText
+                android:id="@+id/edtEnterAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEdittextTint"
+                android:drawablePadding="@dimen/ten_margin"
+                android:hint="@string/enter_answer"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorLable"
+                android:textColorHint="@color/colorHint"
+                app:font="@{`medium`}" />
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</layout>

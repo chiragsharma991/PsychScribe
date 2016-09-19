@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0288D1</color>
+    <color name="colorPrimaryDark">#016296</color>
+    <color name="colorAccent">#0288D1</color>
+    <color name="colorAppAccent">#ABABAB</color>
+    <color name="colorSplash">#E3E3E3</color>
+    <color name="colorEdittextTint">#D2D2D2</color>
+    <color name="colorAddPatientSelector">#F2F2F2</color>
+    <color name="colorDivider">#F7F7F7</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorHint">#A7A7A7</color>
+    <color name="colorTrasparentBlue">#E60288D1</color>
+    <color name="colorTrasparentBlueLight">#B30288D1</color>
+    <color name="colorLable">#4B4B4B</color>
+    <color name="colorCircleIndicator">#CBE7F5</color>
+    <color name="colorPlanBg">#F9F9F9</color>
+    <color name="colorPlanText">#CCE7F5</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorWhite">#ffffff</color>
+</resources>
